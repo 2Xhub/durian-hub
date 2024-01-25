@@ -4,7 +4,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 --------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
     Title = "Durian Hub",
-    SubTitle = "by lethanhdat yeuem",
+    SubTitle = "by lethanhdat_yeuem",
     TabWidth = 160,
     Size = UDim2.fromOffset(450, 300),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -12,6 +12,7 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.End -- Used when theres no MinimizeKeybind
 })
 local Tabs = {
+    Welcome = Window:AddTap({ Title ="Welcome", Icon ="Shark" })
     Main = Window:AddTab({ Title = "Main", Icon = "home" }),
     Setting = Window:AddTab({ Title = "Settings", Icon = "settings" }),
     Stats = Window:AddTab({ Title = "Stats", Icon = "plus-circle" }),
@@ -4529,6 +4530,12 @@ ToggleRemove:OnChanged(function(Value)
         end
         end)
 
+
+local ToggleAntiAfk = Tabs.                            Setting:AddToggle("ToggleAntiAfk", {Title = "AntiAfk, Default = true })
+ToggleAntiAfk:OnChanged(function(Value)
+    FaiFaoAntiAfk = Value
+    end)
+    Options.ToggleAntiAfk:SetValue(true)        
 
 
 Tabs.Setting:AddParagraph({

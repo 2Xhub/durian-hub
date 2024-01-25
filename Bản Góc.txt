@@ -4,7 +4,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 --------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
     Title = "Durian Hub",
-    SubTitle = "by lethanhdat_yeuem",
+    SubTitle = "by lethanhdat yeuem",
     TabWidth = 160,
     Size = UDim2.fromOffset(450, 300),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -13,12 +13,12 @@ local Window = Fluent:CreateWindow({
 })
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "home" }),
-    Setting = Window:AddTab({ Title = "Setting", Icon = "settings" }),
+    Setting = Window:AddTab({ Title = "Settings", Icon = "settings" }),
     Stats = Window:AddTab({ Title = "Stats", Icon = "plus-circle" }),
     Player = Window:AddTab({ Title = "Player", Icon = "baby" }),
-    Teleport = Window:AddTab({ Title = "Teleport", Icon = "palmtree" }),
+    Teleport = Window:AddTab({ Title = "Tele", Icon = "palmtree" }),
     Fruit = Window:AddTab({ Title = "Devil Fruit", Icon = "cherry" }),
-    Raid = Window:AddTab({ Title = "Dungeon", Icon = "swords" }),
+    Raid = Window:AddTab({ Title = "Raid", Icon = "swords" }),
     Race = Window:AddTab({ Title = "Race V4", Icon = "chevrons-right" }),
     Shop = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),
 	Misc = Window:AddTab({ Title = "Misc", Icon = "list-plus" }),
@@ -4362,7 +4362,7 @@ end
 
 
 
-_G.FastAttackDelay = 0.2
+_G.FastAttackDelay = 0.15
 
     local Client = game.Players.LocalPlayer
     local STOP = require(Client.PlayerScripts.CombatFramework.Particle)
@@ -5177,17 +5177,6 @@ Tabs.Fruit:AddParagraph({
 })
 
 
-})
-local ToggleDevilShop = Tabs.
-	Title = "Devil Shop",
-	Description = "",
-	Callback = function()
-		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetFruits")
-        game:GetService("Players").LocalPlayer.PlayerGui.Main.FruitShop.Visible = true
-	end
-})
-
-
 local ToggleEspPlayer = Tabs.Fruit:AddToggle("ToggleEspPlayer", {Title = "Esp Player", Default = false })
 
 ToggleEspPlayer:OnChanged(function(Value)
@@ -5206,8 +5195,6 @@ ToggleEspFruit:OnChanged(function(Value)
     end
 end)
 Options.ToggleEspFruit:SetValue(false)
-
-
 
 
 local ToggleEspIsland = Tabs.Fruit:AddToggle("ToggleEspIsland", {Title = "Esp Island", Default = false })

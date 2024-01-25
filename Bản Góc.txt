@@ -4969,7 +4969,7 @@ function BTPZ(Point)
         end
 
 --------------------------------------------------------------------------------------------------------------------------------------------
---Fruit
+--Fruits Shop
 
 local Remote_GetFruits = game.ReplicatedStorage:FindFirstChild("Remotes").CommF_:InvokeServer("GetFruits");
 Table_DevilFruitSniper = {}

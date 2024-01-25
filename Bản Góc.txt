@@ -4545,6 +4545,8 @@ end)
 
 local CamShake = require(game.ReplicatedStorage.Util.CameraShaker)
 CamShake:Stop()
+   })
+
 
     local ToggleBringMob = Tabs.Setting:AddToggle("ToggleBringMob", {Title = "Bring Mob", Default = true })
     ToggleBringMob:OnChanged(function(Value)

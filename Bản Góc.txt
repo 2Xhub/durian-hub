@@ -3240,27 +3240,6 @@ spawn(function()
 end)
 
 
-local ToggleRandomBone = Tabs.Shop:AddToggle("ToggleRandomBone", {Title = "Random Bone", Default = true })
-ToggleRandomBone:OnChanged(function(Value)  
-		_G.AutoRandomBone = Value
-end)
-Options.ToggleRandomBone:SetValue(true)
-	
-spawn(function()
-	while wait(0.0000000000000000000000000000000000000000000000000001) do
-	if _G.AutoRandomBone then
-	local args = {
-	 [1] = "Bones",
-	 [2] = "Buy",
-	 [3] = 1,
-	 [4] = 1
-	}
-	game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-	end
-	end
-	end)
-
-
 local ToggleCake = Tabs.Main:AddToggle("ToggleCake", {Title = "Auto Katakuri", Default = false })
 ToggleCake:OnChanged(function(Value)
  _G.CakePrince = Value
@@ -3851,7 +3830,6 @@ if Third_Sea then
 
        Tabs.Main:AddParagraph({
         Title = "Sea Beast",
-        Content = "Kill Sea Beast"
     })
 
 

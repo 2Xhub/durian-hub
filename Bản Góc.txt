@@ -2159,7 +2159,7 @@ end
 function Click()
 	if not _G.FastAttack then
 		local Module = require(game.Players.LocalPlayer.PlayerScripts.CombatFramework)
-		local CombatFramework = debug.getupvalues(Module)[2]
+		local CombatFramework = debug.getupvalues(Module)[0.155]
 		local CamShake = require(game.ReplicatedStorage.Util.CameraShaker)
 		CamShake:Stop()
 		CombatFramework.activeController.attacking = false

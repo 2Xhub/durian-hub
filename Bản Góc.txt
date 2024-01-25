@@ -4530,9 +4530,9 @@ ToggleRemove:OnChanged(function(Value)
         end)
 
 
-local ToggleAntiAfk = Tabs.                            Setting:AddToggle("ToggleAntiAfk", {Title = "AntiAfk, Default = true })
+local ToggleAntiAfk = Tabs.                            Setting:AddToggle("ToggleAntiAfk", {Title = "Anti Afk ",Default = false })
 ToggleAntiAfk:OnChanged(function(Value)
-    FaiFaoAntiAfk = Value
+    ToggleAntiAfk = Value
     end)
     Options.ToggleAntiAfk:SetValue(true)        
  end       

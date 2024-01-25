@@ -5177,6 +5177,17 @@ Tabs.Fruit:AddParagraph({
 })
 
 
+})
+local ToggleDevilShop = Tabs.
+	Title = "Devil Shop",
+	Description = "",
+	Callback = function()
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetFruits")
+        game:GetService("Players").LocalPlayer.PlayerGui.Main.FruitShop.Visible = true
+	end
+})
+
+
 local ToggleEspPlayer = Tabs.Fruit:AddToggle("ToggleEspPlayer", {Title = "Esp Player", Default = false })
 
 ToggleEspPlayer:OnChanged(function(Value)

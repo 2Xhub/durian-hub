@@ -4504,19 +4504,15 @@ CamShake:Stop()
 
 
 
-    local ToggleBypassTP = Tabs.Setting:AddToggle("ToggleBypassTP", {Title = "Bypass Tp", Default = true })
+    local ToggleBypassTP = Tabs.Setting:AddToggle("ToggleBypassTP", {Title = "Bypass Tp", Default = false })
     ToggleBypassTP:OnChanged(function(Value)
         BypassTP = Value
     end)
-    Options.ToggleBypassTP:SetValue(false)
+    Options.ToggleBypassTP:SetValue(true)
 end
 
 
-   local ToggleAntiBan = Tab.
-    Setting:AddToggle("ToggleAntiBan", {Title = "AntiBan", Default = true })
-    
-    
-    
+
 local ToggleRemove = Tabs.Setting:AddToggle("ToggleRemove", {Title = "Remove Dame Text", Default = true })
 ToggleRemove:OnChanged(function(Value)
     FaiFaoRemovetext = Value
@@ -5018,11 +5014,11 @@ spawn(function()
 end)
 
 
-local ToggleStore = Tabs.Fruit:AddToggle("ToggleStore", {Title = "Store Fruit", Default = true })
+local ToggleStore = Tabs.Fruit:AddToggle("ToggleStore", {Title = "Store Fruit", Default = false })
 ToggleStore:OnChanged(function(Value)
     _G.AutoStoreFruit = Value
 end)
-Options.ToggleStore:SetValue(false)
+Options.ToggleStore:SetValue(true)
 
 spawn(function()
     while task.wait() do
@@ -5141,11 +5137,11 @@ spawn(function()
 
 
 
-local ToggleRandomFruit = Tabs.Fruit:AddToggle("ToggleRandomFruit", {Title = "Random Fruit", Default = true })
+local ToggleRandomFruit = Tabs.Fruit:AddToggle("ToggleRandomFruit", {Title = "Random Fruit", Default = false })
 ToggleRandomFruit:OnChanged(function(Value)
     _G.Random_Auto = Value
 end)
-Options.ToggleRandomFruit:SetValue(false)
+Options.ToggleRandomFruit:SetValue(true)
 spawn(function()
     pcall(function()
         while wait(.1) do
@@ -5156,9 +5152,7 @@ spawn(function()
     end)
 end)
 
-local ToggleDoorFruits = Tabs.
- Fruits:AddToggle("DoorFruits", {Title =
- "DoorFruits", Default = false })
+
 local ToggleCollect = Tabs.Fruit:AddToggle("ToggleCollect", {Title = "Collect Devil Fruit", Default = false })
 ToggleCollect:OnChanged(function(Value)
     _G.Tweenfruit = Value

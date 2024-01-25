@@ -2159,7 +2159,7 @@ end
 function Click()
 	if not _G.FastAttack then
 		local Module = require(game.Players.LocalPlayer.PlayerScripts.CombatFramework)
-		local CombatFramework = debug.getupvalues(Module)[0.155]
+		local CombatFramework = debug.getupvalues(Module)[2]
 		local CamShake = require(game.ReplicatedStorage.Util.CameraShaker)
 		CamShake:Stop()
 		CombatFramework.activeController.attacking = false
@@ -3166,7 +3166,7 @@ end)
 
 Tabs.Main:AddParagraph({
     Title = "Misc Farm",
-    Content = "Bone & Cake Prince & "
+    Content = "Bone & Katakuri & "
 })
 
 local ToggleBone = Tabs.Main:AddToggle("ToggleBone", {Title = "Auto Bone", Default = false })
@@ -3240,7 +3240,7 @@ spawn(function()
 end)
 
 
-local ToggleCake = Tabs.Main:AddToggle("ToggleCake", {Title = "Auto Cake Prince", Default = false })
+local ToggleCake = Tabs.Main:AddToggle("ToggleCake", {Title = "Auto Katakuri", Default = false })
 ToggleCake:OnChanged(function(Value)
  _G.CakePrince = Value
 end)
@@ -4362,7 +4362,7 @@ end
 
 
 
-_G.FastAttackDelay = 0.13
+_G.FastAttackDelay = 0.2
 
     local Client = game.Players.LocalPlayer
     local STOP = require(Client.PlayerScripts.CombatFramework.Particle)
@@ -4504,7 +4504,7 @@ CamShake:Stop()
 
 
 
-    local ToggleBypassTP = Tabs.Setting:AddToggle("ToggleBypassTP", {Title = "Bypass Tp", Default = false })
+    local ToggleBypassTP = Tabs.Setting:AddToggle("ToggleBypassTP", {Title = "Bypass Tp", Default = true })
     ToggleBypassTP:OnChanged(function(Value)
         BypassTP = Value
     end)
@@ -4512,7 +4512,11 @@ CamShake:Stop()
 end
 
 
-
+   local ToggleAntiBan = Tab.
+    Setting:AddToggle("ToggleAntiBan", {Title = "AntiBan", Default = true })
+    
+    
+    
 local ToggleRemove = Tabs.Setting:AddToggle("ToggleRemove", {Title = "Remove Dame Text", Default = true })
 ToggleRemove:OnChanged(function(Value)
     FaiFaoRemovetext = Value
@@ -5014,7 +5018,7 @@ spawn(function()
 end)
 
 
-local ToggleStore = Tabs.Fruit:AddToggle("ToggleStore", {Title = "Store Fruit", Default = false })
+local ToggleStore = Tabs.Fruit:AddToggle("ToggleStore", {Title = "Store Fruit", Default = true })
 ToggleStore:OnChanged(function(Value)
     _G.AutoStoreFruit = Value
 end)
@@ -5137,7 +5141,7 @@ spawn(function()
 
 
 
-local ToggleRandomFruit = Tabs.Fruit:AddToggle("ToggleRandomFruit", {Title = "Random Fruit", Default = false })
+local ToggleRandomFruit = Tabs.Fruit:AddToggle("ToggleRandomFruit", {Title = "Random Fruit", Default = true })
 ToggleRandomFruit:OnChanged(function(Value)
     _G.Random_Auto = Value
 end)
@@ -5152,6 +5156,9 @@ spawn(function()
     end)
 end)
 
+local ToggleDoorFruits = Tabs.
+ Fruits:AddToggle("DoorFruits", {Title =
+ "DoorFruits", Default = false })
 local ToggleCollect = Tabs.Fruit:AddToggle("ToggleCollect", {Title = "Collect Devil Fruit", Default = false })
 ToggleCollect:OnChanged(function(Value)
     _G.Tweenfruit = Value
@@ -5558,7 +5565,7 @@ Tabs.Raid:AddParagraph({
 })
 
 
-local ToggleLaw = Tabs.Raid:AddToggle("ToggleLaw", {Title = "Auto Law", Default = false })
+local ToggleLaw = Tabs.Raid:AddToggle("ToggleLaw", {Title = "Kill Law", Default = false })
 
 ToggleLaw:OnChanged(function(Value)
     Auto_Law = Value

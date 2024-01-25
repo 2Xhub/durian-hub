@@ -4535,8 +4535,9 @@ ToggleAntiAfk:OnChanged(function(Value)
     FaiFaoAntiAfk = Value
     end)
     Options.ToggleAntiAfk:SetValue(true)        
-
-
+ end       
+     
+  
 Tabs.Setting:AddParagraph({
     Title = "Setting Skill",
     Content = "Skill use for farm mastery"
